@@ -1,0 +1,88 @@
+leg1_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - leg1_sholder_joint
+    - leg1_upperLeg_joint
+    - leg1_lowerLeg_joint
+  gains:
+    leg1_sholder_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    leg1_upperLeg_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    leg1_lowerLeg_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+leg2_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - leg2_sholder_joint
+    - leg2_upperLeg_joint
+    - leg2_lowerLeg_joint
+  gains:
+    leg2_sholder_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    leg2_upperLeg_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    leg2_lowerLeg_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+leg3_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - leg3_sholder_joint
+    - leg3_upperLeg_joint
+    - leg3_lowerLeg_joint
+  gains:
+    leg3_sholder_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    leg3_upperLeg_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    leg3_lowerLeg_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+leg4_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - leg4_sholder_joint
+    - leg4_upperLeg_joint
+    - leg4_lowerLeg_joint
+  gains:
+    leg4_sholder_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    leg4_upperLeg_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    leg4_lowerLeg_joint:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1

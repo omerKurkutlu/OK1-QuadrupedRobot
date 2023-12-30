@@ -1,0 +1,43 @@
+controller_list:
+  - name: fake_leg1_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - leg1_sholder_joint
+      - leg1_upperLeg_joint
+      - leg1_lowerLeg_joint
+  - name: fake_leg2_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - leg2_sholder_joint
+      - leg2_upperLeg_joint
+      - leg2_lowerLeg_joint
+  - name: fake_leg3_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - leg3_sholder_joint
+      - leg3_upperLeg_joint
+      - leg3_lowerLeg_joint
+  - name: fake_leg4_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - leg4_sholder_joint
+      - leg4_upperLeg_joint
+      - leg4_lowerLeg_joint
+  - name: fake_ok1_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - leg1_sholder_joint
+      - leg1_upperLeg_joint
+      - leg1_lowerLeg_joint
+      - leg2_sholder_joint
+      - leg2_upperLeg_joint
+      - leg2_lowerLeg_joint
+      - leg3_sholder_joint
+      - leg3_upperLeg_joint
+      - leg3_lowerLeg_joint
+      - leg4_sholder_joint
+      - leg4_upperLeg_joint
+      - leg4_lowerLeg_joint
+initial:  # Define initial robot poses per group
+  - group: ok1
+    pose: Standing

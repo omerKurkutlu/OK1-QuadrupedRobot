@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="ok1_description">
+    <link name="body_link">
+        
+<inertial>
+            <origin xyz="-0.000289230415305888 0.000249411598945454 0.187980731962265" rpy="0 0 0" />
+            <mass value="0.666709487101566" />
+            <inertia ixx="0.000340731189480827" ixy="1.31314406533508E-07" ixz="6.5890876562343E-08" iyy="0.000815919754734774" iyz="1.02713383575126E-07" izz="0.00103203950949751" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/body_link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/body_link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="leg1_sholder">
+        
+<inertial>
+            <origin xyz="-0.0100797996076242 -0.00825373387628797 -0.00980713437986327" rpy="0 0 0" />
+            <mass value="0.0738318074656321" />
+            <inertia ixx="2.03261832359899E-05" ixy="-3.91092696448275E-07" ixz="-5.88192153749325E-09" iyy="2.57318446254337E-05" iyz="4.12090146617561E-08" izz="1.36167803302263E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg1_sholder.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg1_sholder.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg1_sholder_joint" type="continuous">
+        <origin xyz="0.0995397271888414 0.039000000000001 0.204530000000001" rpy="-0.00328404923919971 -0.00366189363205534 -3.14158062773443" />
+        <parent link="body_link" />
+        <child link="leg1_sholder" />
+        <axis xyz="0.999993295202696 0 -0.0036619051945618" />
+    </joint>
+    <link name="leg1_upperLeg">
+        
+<inertial>
+            <origin xyz="0.0452792232423253 -0.0334191491253542 0.000339191016331182" rpy="0 0 0" />
+            <mass value="0.133370989032647" />
+            <inertia ixx="2.99525334668162E-05" ixy="1.16405980492441E-05" ixz="1.12203183472814E-05" iyy="0.000132015647561153" iyz="-2.67116694774973E-06" izz="0.00013744227372692" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg1_upperLeg.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg1_upperLeg.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg1_upperLeg_joint" type="continuous">
+        <origin xyz="-0.0106969449547786 -0.0269671783926309 -0.00999951076746555" rpy="0.0046694621549828 0.790773853694313 0.00330749615393403" />
+        <parent link="leg1_sholder" />
+        <child link="leg1_upperLeg" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="leg1_lowerLeg">
+        
+<inertial>
+            <origin xyz="0.000429565936262033 -0.0283722783636612 -0.031315595489188" rpy="0 0 0" />
+            <mass value="0.0659083879166162" />
+            <inertia ixx="8.23189514277027E-05" ixy="4.08574889787754E-07" ixz="-4.69346391911572E-06" iyy="7.95092547910553E-05" iyz="3.87565200524758E-06" izz="1.03388792847456E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg1_lowerLeg.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg1_lowerLeg.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg1_lowerLeg_joint" type="continuous">
+        <origin xyz="0.109493678029156 -0.0108000000000003 -0.0253117951091679" rpy="0 -0.000825326475181663 0" />
+        <parent link="leg1_upperLeg" />
+        <child link="leg1_lowerLeg" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="leg1_shoe">
+        
+<inertial>
+            <origin xyz="0.00652423030663664 0.00266149687275634 0.0100000000000001" rpy="0 0 0" />
+            <mass value="0.00331613062793773" />
+            <inertia ixx="5.17046615587835E-07" ixy="1.10180563264079E-07" ixz="-7.98238940544262E-22" iyy="2.51821628828276E-07" iyz="2.51979886394113E-21" izz="5.23322313772602E-07" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg1_shoe.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.705882352941176 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg1_shoe.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg1_shoe_joint_fixed" type="fixed">
+        <origin xyz="0.000589525911829744 -0.0178000000001228 -0.117942205677224" rpy="1.5707963267954 1.5562513086388 0" />
+        <parent link="leg1_lowerLeg" />
+        <child link="leg1_shoe" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="leg2_sholder">
+        
+<inertial>
+            <origin xyz="-0.0100438192282825 0.00836741230603254 -0.00974756844305564" rpy="0 0 0" />
+            <mass value="0.073831807465632" />
+            <inertia ixx="2.03261363437043E-05" ixy="3.90997840110236E-07" ixz="2.32859753686833E-08" iyy="2.57311366320398E-05" iyz="1.00792005743152E-07" izz="1.36175352158989E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg2_sholder.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg2_sholder.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg2_sholder_joint" type="continuous">
+        <origin xyz="0.0995397271888414 -0.038999999999999 0.20453" rpy="-0.00832062433548992 0 -3.14159265358978" />
+        <parent link="body_link" />
+        <child link="leg2_sholder" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="leg2_upperLeg">
+        
+<inertial>
+            <origin xyz="0.0453516729072076 0.0334198832097389 0.000470285466705023" rpy="0 0 0" />
+            <mass value="0.133373382672251" />
+            <inertia ixx="2.98897566491885E-05" ixy="-1.16496286965906E-05" ixz="1.09094378253702E-05" iyy="0.000132019176310046" iyz="2.63785791012871E-06" izz="0.000137510911727131" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg2_upperLeg.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg2_upperLeg.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg2_upperLeg_joint" type="continuous">
+        <origin xyz="-0.0106602559735094 0.0270818546194537 -0.00972500130406427" rpy="0.0118214582116251 0.789970926671989 0.00839736341152224" />
+        <parent link="leg2_sholder" />
+        <child link="leg2_upperLeg" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="leg2_lowerLeg">
+        
+<inertial>
+            <origin xyz="0.00040180607625448 0.0283723893074776 -0.0312645968917846" rpy="0 0 0" />
+            <mass value="0.0659096193564579" />
+            <inertia ixx="8.23143081355185E-05" ixy="-4.12078189570487E-07" ixz="-4.75859756735665E-06" iyy="7.95131332007829E-05" iyz="-3.87549805442627E-06" izz="1.0347555832262E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg2_lowerLeg.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg2_lowerLeg.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg2_lowerLeg_joint" type="continuous">
+        <origin xyz="0.109666332997159 0.0107999999999999 -0.0249949576306193" rpy="0 -0.00460769933465639 0" />
+        <parent link="leg2_upperLeg" />
+        <child link="leg2_lowerLeg" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="leg2_shoe">
+        
+<inertial>
+            <origin xyz="0.00652423030663671 0.00266149687275635 0.01" rpy="0 0 0" />
+            <mass value="0.00331613062793772" />
+            <inertia ixx="5.17046615587834E-07" ixy="1.10180563264079E-07" ixz="-7.73876518247331E-22" iyy="2.51821628828277E-07" iyz="1.82998051339885E-21" izz="5.23322313772601E-07" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg2_shoe.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.705882352941176 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg2_shoe.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg2_shoe_joint_fixed" type="fixed">
+        <origin xyz="0.00103389302339335 0.0178000000001247 -0.117735366628566" rpy="-1.57079632679489 0.863252906301781 0" />
+        <parent link="leg2_lowerLeg" />
+        <child link="leg2_shoe" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="leg3_sholder">
+        
+<inertial>
+            <origin xyz="0.0285906233719435 -0.00825373387628808 -0.0099487427521034" rpy="0 0 0" />
+            <mass value="0.0738318074656322" />
+            <inertia ixx="2.03261832359957E-05" ixy="-3.91092696448283E-07" ixz="-5.88192153752963E-09" iyy="2.57318446254395E-05" iyz="4.12090146625951E-08" izz="1.36167803302263E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg3_sholder.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg3_sholder.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg3_sholder_joint" type="continuous">
+        <origin xyz="-0.0877895905525046 0.0389999999999991 0.20453" rpy="-0.00328404923919971 -0.00366189363205534 -3.14158062773443" />
+        <parent link="body_link" />
+        <child link="leg3_sholder" />
+        <axis xyz="0.999993295202696 0 -0.0036619051945618" />
+    </joint>
+    <link name="leg3_upperLeg">
+        
+<inertial>
+            <origin xyz="0.0452792232423253 -0.0334191491253545 0.000339191016331258" rpy="0 0 0" />
+            <mass value="0.133370989032647" />
+            <inertia ixx="2.99525334668161E-05" ixy="1.16405980492442E-05" ixz="1.12203183472814E-05" iyy="0.000132015647561153" iyz="-2.67116694774972E-06" izz="0.00013744227372692" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg3_upperLeg.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg3_upperLeg.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg3_upperLeg_joint" type="continuous">
+        <origin xyz="0.0279734780247891 -0.0269671783926307 -0.0101411191397053" rpy="0.0046694621549828 0.790773853694313 0.00330749615393497" />
+        <parent link="leg3_sholder" />
+        <child link="leg3_upperLeg" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="leg3_lowerLeg">
+        
+<inertial>
+            <origin xyz="0.000429565936262449 -0.0283722783636618 -0.0313155954891775" rpy="0 0 0" />
+            <mass value="0.0659083879166247" />
+            <inertia ixx="8.23189514277364E-05" ixy="4.0857488978749E-07" ixz="-4.69346391911413E-06" iyy="7.95092547910898E-05" iyz="3.87565200524633E-06" izz="1.03388792847472E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg3_lowerLeg.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg3_lowerLeg.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg3_lowerLeg_joint" type="continuous">
+        <origin xyz="0.109493678029156 -0.0108000000000005 -0.0253117951091679" rpy="0 -0.000825326475181663 0" />
+        <parent link="leg3_upperLeg" />
+        <child link="leg3_lowerLeg" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="leg3_shoe">
+        
+<inertial>
+            <origin xyz="0.0065242303066366 0.00266149687275638 0.01" rpy="0 0 0" />
+            <mass value="0.00331613062793771" />
+            <inertia ixx="5.17046615587833E-07" ixy="1.10180563264079E-07" ixz="-1.30083363930248E-21" iyy="2.51821628828275E-07" iyz="4.03192913658043E-21" izz="5.233223137726E-07" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg3_shoe.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.705882352941176 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg3_shoe.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg3_shoe_joint_fixed" type="fixed">
+        <origin xyz="0.000589525911828731 -0.0178000000001217 -0.117942205677204" rpy="1.57079632679544 1.55625130863879 0" />
+        <parent link="leg3_lowerLeg" />
+        <child link="leg3_shoe" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="leg4_sholder">
+        
+<inertial>
+            <origin xyz="0.028416436745352 0.00836741230603257 -0.00974756844305578" rpy="0 0 0" />
+            <mass value="0.0738318074656321" />
+            <inertia ixx="2.03261363437078E-05" ixy="3.90997840110236E-07" ixz="2.32859753686822E-08" iyy="2.57311366320434E-05" iyz="1.00792005743151E-07" izz="1.36175352158989E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg4_sholder.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg4_sholder.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg4_sholder_joint" type="continuous">
+        <origin xyz="-0.0880000168375241 -0.0390000000000009 0.20453" rpy="-0.00832062433548992 0 -3.14159265358978" />
+        <parent link="body_link" />
+        <child link="leg4_sholder" />
+        <axis xyz="1 0 0" />
+    </joint>
+    <link name="leg4_upperLeg">
+        
+<inertial>
+            <origin xyz="0.0453516729072075 0.0334198832097389 0.000470285466704967" rpy="0 0 0" />
+            <mass value="0.133373382672251" />
+            <inertia ixx="2.98897566491886E-05" ixy="-1.16496286965906E-05" ixz="1.09094378253702E-05" iyy="0.000132019176310047" iyz="2.6378579101287E-06" izz="0.000137510911727132" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg4_upperLeg.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg4_upperLeg.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg4_upperLeg_joint" type="continuous">
+        <origin xyz="0.0278000000001251 0.0270818546194538 -0.00972500130406432" rpy="0.0118214582116251 0.789970926671988 0.00839736341152174" />
+        <parent link="leg4_sholder" />
+        <child link="leg4_upperLeg" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="leg4_lowerLeg">
+        
+<inertial>
+            <origin xyz="0.000401806076257033 0.0283723893074795 -0.031264596891804" rpy="0 0 0" />
+            <mass value="0.0659096193564845" />
+            <inertia ixx="8.23143081355244E-05" ixy="-4.12078189570611E-07" ixz="-4.75859756735976E-06" iyy="7.95131332007868E-05" iyz="-3.87549805442544E-06" izz="1.0347555832263E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg4_lowerLeg.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg4_lowerLeg.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg4_lowerLeg_joint" type="continuous">
+        <origin xyz="0.109666332997159 0.0107999999999999 -0.0249949576306194" rpy="0 -0.00460769933465794 0" />
+        <parent link="leg4_upperLeg" />
+        <child link="leg4_lowerLeg" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <link name="leg4_shoe">
+        
+<inertial>
+            <origin xyz="0.00652423030663669 0.00266149687275635 0.01" rpy="0 0 0" />
+            <mass value="0.00331613062793771" />
+            <inertia ixx="5.17046615587833E-07" ixy="1.1018056326408E-07" ixz="-7.18437621093239E-22" iyy="2.51821628828277E-07" iyz="1.91842954968397E-21" izz="5.23322313772599E-07" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg4_shoe.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.705882352941176 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/leg4_shoe.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="leg4_shoe_joint_fixed" type="fixed">
+        <origin xyz="0.00103389302339188 0.0178000000001242 -0.117735366628596" rpy="-1.57079632679489 0.86325290630178 0" />
+        <parent link="leg4_lowerLeg" />
+        <child link="leg4_shoe" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="cover_front">
+        
+<inertial>
+            <origin xyz="-0.018505 0.017577 0.02168" rpy="0 0 0" />
+            <mass value="0.04699" />
+            <inertia ixx="4.3768E-05" ixy="-4.4514E-11" ixz="-5.8772E-11" iyy="7.5336E-05" iyz="-5.5959E-06" izz="9.4358E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/cover_front.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.70588 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/cover_front.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="cover_front_joint_fixed" type="fixed">
+        <origin xyz="0.13999998316235 0.0185052150793399 0.179908987433885" rpy="1.57079632679489 0 1.57079632679491" />
+        <parent link="body_link" />
+        <child link="cover_front" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="cover_back">
+        
+<inertial>
+            <origin xyz="-0.0005261 0.00079675 0.022474" rpy="0 0 0" />
+            <mass value="0.042009" />
+            <inertia ixx="3.8552E-05" ixy="-2.7177E-07" ixz="3.6415E-07" iyy="6.5114E-05" iyz="1.0132E-06" izz="8.2896E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/cover_back.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.70588 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/cover_back.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="cover_back_joint_fixed" type="fixed">
+        <origin xyz="-0.140000016837649 0 0.19533" rpy="1.5707963267949 0 -1.57079632679489" />
+        <parent link="body_link" />
+        <child link="cover_back" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="cover_top">
+        
+<inertial>
+            <origin xyz="0.068998 -0.047119 -0.086136" rpy="0 0 0" />
+            <mass value="0.061906" />
+            <inertia ixx="0.00019967" ixy="5.7843E-07" ixz="-4.7343E-07" iyy="0.00028451" iyz="-1.3111E-07" izz="9.7577E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/cover_top.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.70588 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/cover_top.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="cover_top_joint_fixed" type="fixed">
+        <origin xyz="-0.0860000168376504 0.0683888383366848 0.269684956078798" rpy="1.5707963267949 0 -1.57079632679489" />
+        <parent link="body_link" />
+        <child link="cover_top" />
+        <axis xyz="0 0 0" />
+    </joint>
+    <link name="cover_bottom">
+        
+<inertial>
+            <origin xyz="5.5511E-17 -0.062106 1.6653E-16" rpy="0 0 0" />
+            <mass value="0.057052" />
+            <inertia ixx="0.00016495" ixy="-1.3463E-20" ixz="1.4428E-19" iyy="0.0002475" iyz="-9.2922E-20" izz="9.3828E-05" />
+        </inertial>
+
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/cover_bottom.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 0.70588 0 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://ok1_description/meshes/cover_bottom.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="cover_bottom_joint_fixed" type="fixed">
+        <origin xyz="0 0 0.23063" rpy="1.57079632679489 0 1.57079632679491" />
+        <parent link="body_link" />
+        <child link="cover_bottom" />
+        <axis xyz="0 0 0" />
+    </joint>
+    
+<transmission name="trans_leg1_sholder_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg1_sholder_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg1_sholder_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg1_upperLeg_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg1_upperLeg_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg1_upperLeg_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg1_lowerLeg_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg1_lowerLeg_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg1_lowerLeg_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg2_sholder_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg2_sholder_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg2_sholder_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg2_upperLeg_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg2_upperLeg_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg2_upperLeg_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg2_lowerLeg_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg2_lowerLeg_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg2_lowerLeg_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg3_sholder_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg3_sholder_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg3_sholder_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg3_upperLeg_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg3_upperLeg_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg3_upperLeg_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg3_lowerLeg_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg3_lowerLeg_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg3_lowerLeg_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg4_sholder_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg4_sholder_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg4_sholder_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg4_upperLeg_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg4_upperLeg_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg4_upperLeg_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_leg4_lowerLeg_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="leg4_lowerLeg_joint">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="leg4_lowerLeg_joint_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>

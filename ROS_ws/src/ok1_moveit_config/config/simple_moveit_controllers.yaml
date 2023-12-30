@@ -1,0 +1,33 @@
+controller_list:
+  - name: leg1_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - leg1_sholder_joint
+      - leg1_upperLeg_joint
+      - leg1_lowerLeg_joint
+  - name: leg2_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - leg2_sholder_joint
+      - leg2_upperLeg_joint
+      - leg2_lowerLeg_joint
+  - name: leg3_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - leg3_sholder_joint
+      - leg3_upperLeg_joint
+      - leg3_lowerLeg_joint
+  - name: leg4_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: True
+    joints:
+      - leg4_sholder_joint
+      - leg4_upperLeg_joint
+      - leg4_lowerLeg_joint

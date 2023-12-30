@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ok1_description
+    relative_path: urdf/ok1_description.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ok1_description.srdf
+  CONFIG:
+    author_name: Omer Kurkutlu
+    author_email: omerkurkutlu@hotmail.com
+    generated_timestamp: 1661865506

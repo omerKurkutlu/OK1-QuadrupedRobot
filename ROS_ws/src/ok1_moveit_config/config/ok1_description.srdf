@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This does not replace URDF, and is not an extension of URDF.
+    This is a format for representing semantic information about the robot structure.
+    A URDF file must exist for this robot as well, where the joints and the links that are referenced are defined
+-->
+<robot name="ok1_description">
+    <!--GROUPS: Representation of a set of joints and links. This can be useful for specifying DOF to plan for, defining arms, end effectors, etc-->
+    <!--LINKS: When a link is specified, the parent joint of that link (if it exists) is automatically included-->
+    <!--JOINTS: When a joint is specified, the child link of that joint (which will always exist) is automatically included-->
+    <!--CHAINS: When a chain is specified, all the links along the chain (including endpoints) are included in the group. Additionally, all the joints that are parents to included links are also included. This means that joints along the chain and the parent joint of the base link are included in the group-->
+    <!--SUBGROUPS: Groups can also be formed by referencing to already defined group names-->
+    <group name="leg1">
+        <chain base_link="body_link" tip_link="leg1_shoe"/>
+    </group>
+    <group name="leg2">
+        <chain base_link="body_link" tip_link="leg2_shoe"/>
+    </group>
+    <group name="leg3">
+        <chain base_link="body_link" tip_link="leg3_shoe"/>
+    </group>
+    <group name="leg4">
+        <chain base_link="body_link" tip_link="leg4_shoe"/>
+    </group>
+    <group name="ok1">
+        <group name="leg1"/>
+        <group name="leg2"/>
+        <group name="leg3"/>
+        <group name="leg4"/>
+    </group>
+    <!--GROUP STATES: Purpose: Define a named state for a particular group, in terms of joint values. This is useful to define states like 'folded arms'-->
+    <group_state name="Standing" group="ok1">
+        <joint name="leg1_lowerLeg_joint" value="0"/>
+        <joint name="leg1_sholder_joint" value="0"/>
+        <joint name="leg1_upperLeg_joint" value="0"/>
+        <joint name="leg2_lowerLeg_joint" value="0"/>
+        <joint name="leg2_sholder_joint" value="0"/>
+        <joint name="leg2_upperLeg_joint" value="0"/>
+        <joint name="leg3_lowerLeg_joint" value="0"/>
+        <joint name="leg3_sholder_joint" value="0"/>
+        <joint name="leg3_upperLeg_joint" value="0"/>
+        <joint name="leg4_lowerLeg_joint" value="0"/>
+        <joint name="leg4_sholder_joint" value="0"/>
+        <joint name="leg4_upperLeg_joint" value="0"/>
+    </group_state>
+    <group_state name="Sitting" group="ok1">
+        <joint name="leg1_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg1_sholder_joint" value="0"/>
+        <joint name="leg1_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg2_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg2_sholder_joint" value="0"/>
+        <joint name="leg2_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg3_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg3_sholder_joint" value="0"/>
+        <joint name="leg3_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg4_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg4_sholder_joint" value="0"/>
+        <joint name="leg4_upperLeg_joint" value="-0.7853"/>
+    </group_state>
+    <group_state name="Looking_Up" group="ok1">
+        <joint name="leg1_lowerLeg_joint" value="0"/>
+        <joint name="leg1_sholder_joint" value="0"/>
+        <joint name="leg1_upperLeg_joint" value="0"/>
+        <joint name="leg2_lowerLeg_joint" value="0"/>
+        <joint name="leg2_sholder_joint" value="0"/>
+        <joint name="leg2_upperLeg_joint" value="0"/>
+        <joint name="leg3_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg3_sholder_joint" value="0"/>
+        <joint name="leg3_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg4_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg4_sholder_joint" value="0"/>
+        <joint name="leg4_upperLeg_joint" value="-0.7853"/>
+    </group_state>
+    <group_state name="Looking_Down" group="ok1">
+        <joint name="leg1_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg1_sholder_joint" value="0"/>
+        <joint name="leg1_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg2_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg2_sholder_joint" value="0"/>
+        <joint name="leg2_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg3_lowerLeg_joint" value="0"/>
+        <joint name="leg3_sholder_joint" value="0"/>
+        <joint name="leg3_upperLeg_joint" value="0"/>
+        <joint name="leg4_lowerLeg_joint" value="0"/>
+        <joint name="leg4_sholder_joint" value="0"/>
+        <joint name="leg4_upperLeg_joint" value="0"/>
+    </group_state>
+    <group_state name="Bend_Right" group="ok1">
+        <joint name="leg1_lowerLeg_joint" value="0"/>
+        <joint name="leg1_sholder_joint" value="0"/>
+        <joint name="leg1_upperLeg_joint" value="0"/>
+        <joint name="leg2_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg2_sholder_joint" value="0"/>
+        <joint name="leg2_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg3_lowerLeg_joint" value="0"/>
+        <joint name="leg3_sholder_joint" value="0"/>
+        <joint name="leg3_upperLeg_joint" value="0"/>
+        <joint name="leg4_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg4_sholder_joint" value="0"/>
+        <joint name="leg4_upperLeg_joint" value="-0.7853"/>
+    </group_state>
+    <group_state name="Bend_Left" group="ok1">
+        <joint name="leg1_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg1_sholder_joint" value="0"/>
+        <joint name="leg1_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg2_lowerLeg_joint" value="0"/>
+        <joint name="leg2_sholder_joint" value="0"/>
+        <joint name="leg2_upperLeg_joint" value="0"/>
+        <joint name="leg3_lowerLeg_joint" value="0.7853"/>
+        <joint name="leg3_sholder_joint" value="0"/>
+        <joint name="leg3_upperLeg_joint" value="-0.7853"/>
+        <joint name="leg4_lowerLeg_joint" value="0"/>
+        <joint name="leg4_sholder_joint" value="0"/>
+        <joint name="leg4_upperLeg_joint" value="0"/>
+    </group_state>
+    <!--VIRTUAL JOINT: Purpose: this element defines a virtual joint between a robot link and an external frame of reference (considered fixed with respect to the robot)-->
+    <virtual_joint name="virtual_joint" type="floating" parent_frame="world" child_link="body_link"/>
+    <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
+    <disable_collisions link1="body_link" link2="cover_back" reason="Adjacent"/>
+    <disable_collisions link1="body_link" link2="cover_bottom" reason="Adjacent"/>
+    <disable_collisions link1="body_link" link2="cover_front" reason="Adjacent"/>
+    <disable_collisions link1="body_link" link2="cover_top" reason="Adjacent"/>
+    <disable_collisions link1="body_link" link2="leg1_sholder" reason="Adjacent"/>
+    <disable_collisions link1="body_link" link2="leg2_sholder" reason="Adjacent"/>
+    <disable_collisions link1="body_link" link2="leg3_sholder" reason="Adjacent"/>
+    <disable_collisions link1="body_link" link2="leg4_sholder" reason="Adjacent"/>
+    <disable_collisions link1="cover_back" link2="cover_bottom" reason="Never"/>
+    <disable_collisions link1="cover_back" link2="cover_front" reason="Never"/>
+    <disable_collisions link1="cover_back" link2="cover_top" reason="Never"/>
+    <disable_collisions link1="cover_back" link2="leg1_sholder" reason="Never"/>
+    <disable_collisions link1="cover_back" link2="leg1_upperLeg" reason="Never"/>
+    <disable_collisions link1="cover_back" link2="leg2_sholder" reason="Never"/>
+    <disable_collisions link1="cover_back" link2="leg2_upperLeg" reason="Never"/>
+    <disable_collisions link1="cover_bottom" link2="cover_front" reason="Never"/>
+    <disable_collisions link1="cover_bottom" link2="cover_top" reason="Never"/>
+    <disable_collisions link1="cover_bottom" link2="leg1_sholder" reason="Never"/>
+    <disable_collisions link1="cover_bottom" link2="leg2_sholder" reason="Never"/>
+    <disable_collisions link1="cover_bottom" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="cover_bottom" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="cover_front" link2="cover_top" reason="Never"/>
+    <disable_collisions link1="cover_front" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="cover_front" link2="leg3_upperLeg" reason="Never"/>
+    <disable_collisions link1="cover_front" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="cover_front" link2="leg4_upperLeg" reason="Never"/>
+    <disable_collisions link1="leg1_lowerLeg" link2="leg1_shoe" reason="Adjacent"/>
+    <disable_collisions link1="leg1_lowerLeg" link2="leg1_sholder" reason="Never"/>
+    <disable_collisions link1="leg1_lowerLeg" link2="leg1_upperLeg" reason="Adjacent"/>
+    <disable_collisions link1="leg1_lowerLeg" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="leg1_shoe" link2="leg1_sholder" reason="Never"/>
+    <disable_collisions link1="leg1_shoe" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="leg1_sholder" link2="leg1_upperLeg" reason="Adjacent"/>
+    <disable_collisions link1="leg1_sholder" link2="leg3_lowerLeg" reason="Never"/>
+    <disable_collisions link1="leg1_sholder" link2="leg3_shoe" reason="Never"/>
+    <disable_collisions link1="leg1_sholder" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="leg1_sholder" link2="leg3_upperLeg" reason="Never"/>
+    <disable_collisions link1="leg1_sholder" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="leg1_sholder" link2="leg4_upperLeg" reason="Never"/>
+    <disable_collisions link1="leg1_upperLeg" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="leg1_upperLeg" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="leg2_lowerLeg" link2="leg2_shoe" reason="Adjacent"/>
+    <disable_collisions link1="leg2_lowerLeg" link2="leg2_sholder" reason="Never"/>
+    <disable_collisions link1="leg2_lowerLeg" link2="leg2_upperLeg" reason="Adjacent"/>
+    <disable_collisions link1="leg2_lowerLeg" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="leg2_shoe" link2="leg2_sholder" reason="Never"/>
+    <disable_collisions link1="leg2_shoe" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="leg2_sholder" link2="leg2_upperLeg" reason="Adjacent"/>
+    <disable_collisions link1="leg2_sholder" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="leg2_sholder" link2="leg3_upperLeg" reason="Never"/>
+    <disable_collisions link1="leg2_sholder" link2="leg4_lowerLeg" reason="Never"/>
+    <disable_collisions link1="leg2_sholder" link2="leg4_shoe" reason="Never"/>
+    <disable_collisions link1="leg2_sholder" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="leg2_sholder" link2="leg4_upperLeg" reason="Never"/>
+    <disable_collisions link1="leg2_upperLeg" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="leg2_upperLeg" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="leg3_lowerLeg" link2="leg3_shoe" reason="Adjacent"/>
+    <disable_collisions link1="leg3_lowerLeg" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="leg3_lowerLeg" link2="leg3_upperLeg" reason="Adjacent"/>
+    <disable_collisions link1="leg3_shoe" link2="leg3_sholder" reason="Never"/>
+    <disable_collisions link1="leg3_sholder" link2="leg3_upperLeg" reason="Adjacent"/>
+    <disable_collisions link1="leg4_lowerLeg" link2="leg4_shoe" reason="Adjacent"/>
+    <disable_collisions link1="leg4_lowerLeg" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="leg4_lowerLeg" link2="leg4_upperLeg" reason="Adjacent"/>
+    <disable_collisions link1="leg4_shoe" link2="leg4_sholder" reason="Never"/>
+    <disable_collisions link1="leg4_sholder" link2="leg4_upperLeg" reason="Adjacent"/>
+</robot>
