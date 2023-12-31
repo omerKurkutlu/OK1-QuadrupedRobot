@@ -1,7 +1,27 @@
-# OK1-QuadrupedRobot
-Quadruped Robot based on Arduino, also ROS&amp;Gazebo supported...
+# Quadruped Robot Project
 
-![IMG_2472](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/assets/53236244/15c930ff-731e-4ed6-b36e-b54f5b8c1278)
+## Overview
+
+This project implements a quadruped robot named OK1 using Arduino, with support for ROS and Gazebo simulation. The robot is designed to walk on four legs and can be controlled both physically and through software.
+
+## Features
+
+- Quadruped robot hardware based on Arduino Mega 2560.
+- A Remote Controller
+- ROS (Robot Operating System) support for high-level control and communication.
+- Gazebo simulation environment for testing and development.
+- Modular and extensible design for customization.
+
+## Folder Structure
+
+- **`/CAD-Hardware`**: Contains 3D printing files for the robot parts.
+- **`/Arduino`**: Arduino code for controlling the robot.
+- **`/ROS_ws`**: ROS packages for communication and control.
+- **`/media`**: Files for Gazebo simulation.
+
+![render0](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/assets/53236244/e8f19957-b274-43f2-a274-e71f6e638073)
+
+
 
 
 ## Enjoying OK1 Robot (Video)
@@ -12,26 +32,51 @@ Quadruped Robot based on Arduino, also ROS&amp;Gazebo supported...
 ## Remote controller usage instructions 
 ![remote](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/assets/53236244/2ecdcddc-efc1-45f6-b638-c44f203aaf1d)
 
-## There are four folders
-1)    Arduino
-    1.1)  OK1
-    1.2)  RemoteController
-2)    CAD-Hardware
-    2.1)OK1-stl
-    2.2)Remote-stl
-3)    ROS_ws
-4)    media
 
+## Getting Started for ROS and Gazebo
 
-## Launch Gantry in ROS
-For only Rviz
-```bash
-roslaunch ok1_moveit_config demo.launch
-```
-For Gazebo
-```bash
-roslaunch ok1_moveit_config demo_gazebo.launch
-```    
+Follow these steps to get started with the ROS and Gazebo simulation environment for the OK1 Quadruped Robot:
+
+1. **Clone the Repository:**
+
+    ```bash
+    git clone https://github.com/omerKurkutlu/OK1-QuadrupedRobot.git
+    ```
+
+2. **Navigate to the ROS Workspace:**
+
+    ```bash
+    cd ROS_ws
+    ```
+
+3. **Build the ROS Workspace:**
+
+    ```bash
+    catkin_make
+    ```
+
+4. **Source the Workspace:**
+
+    ```bash
+    source ./devel/setup.bash
+    ```
+
+5. **Launch the Robot:**
+
+    - For Rviz Visualization:
+
+        ```bash
+        roslaunch ok1_moveit_config demo.launch
+        ```
+
+    - For Gazebo Simulation:
+
+        ```bash
+        roslaunch ok1_moveit_config demo_gazebo.launch
+        ```
+
+These commands will set up the necessary environment for ROS and Gazebo, allowing you to visualize and simulate the OK1 Quadruped Robot. Make sure to follow the instructions carefully, and feel free to explore the ROS workspace for additional details.
+ 
 ![r1](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/assets/53236244/10049687-1cb5-4f1a-949e-f875c591d6bd)
 
 
@@ -39,8 +84,23 @@ roslaunch ok1_moveit_config demo_gazebo.launch
 [![OK1 Robot - Quadruped Robot Gazebo Simulation](https://img.youtube.com/vi/0DxQdT6U4pM/0.jpg)](https://www.youtube.com/watch?v=0DxQdT6U4pM&list=PLxYZuRPj6mQbpEWxYQ2gAdy5SrHOGtlZl&ab_channel=%C3%96merKurkutlu)
 [![OK1 Robot - Quadruped Robot based on ROS and MoveIt](https://img.youtube.com/vi/SKkTH99PJiU/0.jpg)](https://www.youtube.com/watch?v=SKkTH99PJiU&list=PLxYZuRPj6mQbpEWxYQ2gAdy5SrHOGtlZl&index=2&ab_channel=%C3%96merKurkutlu)
 
-## PRINTINGS And HARDWARE
-OK1 Printings
+## 3D Printing Files and Assembly Instructions
+
+You can find the 3D printing files in the designated folders. Feel free to explore the following directories:
+
+- [Folder 1: OK1 Printing Files]([link/to/folder1](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/OK1-stl))
+- [Folder 2: Remote Controller Printing Files]([link/to/folder1](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/Remote-stl))
+
+Additionally, assembly instructions are available in a series of video tutorials. Follow the steps in the video series linked below:
+
+[Assembly Video Series]([link/to/assembly/videos](https://www.youtube.com/watch?v=DqhxIvC9eWk&list=PLxYZuRPj6mQb903nfbroYomobq1NtwxHy&pp=gAQBiAQB))
+
+
+
+
+
+
+### OK1 Printings
 
 | NO. | Part Name                             | QTY. |
 | --- | ------------------------------------- | ---- |
@@ -68,7 +128,7 @@ OK1 Printings
 | 22  | Leg_upperLeg_ServoConnector_Right    | 2    |
 |  | NUMBER OF PARTS | 41 |
 
-Remote Controller Printings
+### Remote Controller Printings
 | NO.   | PART NAME            | QTY. |
 | ---   | ---------------      | ---  |
 | 1     | Back_Cover           | 1    |
@@ -76,7 +136,7 @@ Remote Controller Printings
 | 3     | joystick_frame       | 3    |
 |  | NUMBER OF PARTS | 5 |
 
-ELECTRONICS for OK1
+### ELECTRONICS for OK1
 | NO. | PART NAME               | QTY. |
 | --- | ----------------------- | ---- |
 | 1   | Arduino Mega 2560       | 1    |
@@ -93,7 +153,7 @@ ELECTRONICS for OK1
 | 12  | Servo-DS3225MG          | 12   |
 |  | NUMBER OF COMPONENTS | 32 |
 
-ELECTRONICS for Remote Controller
+### ELECTRONICS for Remote Controller
 | NO. | PART NAME                | QTY. |
 | --- | ------------------------ | ---- |
 | 1   | Arduino Mega 2560        | 1    |
@@ -114,7 +174,7 @@ ELECTRONICS for Remote Controller
 | 16  | Robot_switch             | 1    |
 | 17  | screws                   | 25   |
 
-HARDWAREs
+### HARDWAREs
 | NO. | PART NAME    | QTY. |
 | --- | ------------ | ---- |
 | 1   | nut          | 4    |
@@ -122,7 +182,7 @@ HARDWAREs
 | 3   | Servo-horn   | 12   |
 | 4   | screw-m3     | 30   |
 
-EXTERNALS
+### EXTERNALS
 | NO. | PART NAME      | QTY. |
 | --- | -------------- | ---- |
 | 1   | LiPo Charger   | 1    |
