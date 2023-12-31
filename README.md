@@ -108,12 +108,12 @@ These commands will set up the necessary environment for ROS and Gazebo, allowin
 
 You can find the 3D printing files in the designated folders. Feel free to explore the following directories:
 
-- [Folder 1: OK1 Printing Files]((https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/OK1-stl))
-- [Folder 2: Remote Controller Printing Files]((https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/Remote-stl))
+- [Folder 1: OK1 Printing Files](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/OK1-stl)
+- [Folder 2: Remote Controller Printing Files](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/Remote-stl)
 
 Additionally, assembly instructions are available in a series of video tutorials. Follow the steps in the video series linked below:
 
-[Assembly Video Series]((https://www.youtube.com/watch?v=DqhxIvC9eWk&list=PLxYZuRPj6mQb903nfbroYomobq1NtwxHy&pp=gAQBiAQB))
+[Assembly Video Series](https://www.youtube.com/watch?v=DqhxIvC9eWk&list=PLxYZuRPj6mQb903nfbroYomobq1NtwxHy&pp=gAQBiAQB)
 
 
 
