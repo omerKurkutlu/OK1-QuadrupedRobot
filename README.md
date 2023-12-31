@@ -113,7 +113,7 @@ You can find the 3D printing files in the designated folders. Feel free to explo
 
 Additionally, assembly instructions are available in a series of video tutorials. Follow the steps in the video series linked below:
 
-[Assembly Video Series]([link/to/assembly/videos](https://www.youtube.com/watch?v=DqhxIvC9eWk&list=PLxYZuRPj6mQb903nfbroYomobq1NtwxHy&pp=gAQBiAQB))
+[Assembly Video Series](https://www.youtube.com/watch?v=DqhxIvC9eWk&list=PLxYZuRPj6mQb903nfbroYomobq1NtwxHy&pp=gAQBiAQB))
 
 
 
