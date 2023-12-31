@@ -1,5 +1,29 @@
 # Quadruped Robot Project
 
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Folder Structure](#folder-structure)
+4. [Enjoying OK1 Robot (Video)](#enjoying-ok1-robot-video)
+5. [Remote Controller Usage Instructions](#remote-controller-usage-instructions)
+6. [Getting Started for ROS and Gazebo](#getting-started-for-ros-and-gazebo)
+    - [Clone the Repository](#1-clone-the-repository)
+    - [Navigate to the ROS Workspace](#2-navigate-to-the-ros-workspace)
+    - [Build the ROS Workspace](#3-build-the-ros-workspace)
+    - [Source the Workspace](#4-source-the-workspace)
+    - [Launch the Robot](#5-launch-the-robot)
+7. [OK1 Robot Simulation (Video)](#ok1-robot-simulation-video)
+8. [3D Printing Files and Assembly Instructions](#3d-printing-files-and-assembly-instructions)
+    - [OK1 Printings](#ok1-printings)
+    - [Remote Controller Printings](#remote-controller-printings)
+    - [ELECTRONICS for OK1](#electronics-for-ok1)
+    - [ELECTRONICS for Remote Controller](#electronics-for-remote-controller)
+    - [HARDWAREs](#hardwares)
+    - [EXTERNALS](#externals)
+9. [Electronics Assembly](#electronics-assembly)
+10. [Wiring Instructions](#wiring-instructions)
+11. [Arduino Code Compiling and Uploading](#arduino-code-compiling-and-uploading)
+
+
 ## Overview
 
 This project implements a quadruped robot named OK1 using Arduino, with support for ROS and Gazebo simulation. The robot is designed to walk on four legs and can be controlled both physically and through software.
@@ -88,8 +112,8 @@ These commands will set up the necessary environment for ROS and Gazebo, allowin
 
 You can find the 3D printing files in the designated folders. Feel free to explore the following directories:
 
-- [Folder 1: OK1 Printing Files]([link/to/folder1](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/OK1-stl))
-- [Folder 2: Remote Controller Printing Files]([link/to/folder1](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/Remote-stl))
+- [Folder 1: OK1 Printing Files](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/OK1-stl))
+- [Folder 2: Remote Controller Printing Files](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/tree/main/CAD-Hardware/Remote-stl))
 
 Additionally, assembly instructions are available in a series of video tutorials. Follow the steps in the video series linked below:
 
@@ -190,5 +214,70 @@ Additionally, assembly instructions are available in a series of video tutorials
 | 3   | Jumpers        | 1    |
 | 4   | Cables         | 1    |
 
+
+## Electronics Assembly
+
+Below is a simplified Fritzing schema providing an overview of the electronics assembly for the OK1 Quadruped Robot project. Please note that this schema is incomplete and serves as a starting point. Refer to the detailed schematics and documentation for accurate connections.
+
+![ok1_v1_bb](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/assets/53236244/cb2b4673-b683-4042-9963-dafc73faf6dd)
+
+
+You can also refer those images for electronics:
+
+- [Image 1: OK1 Printing Files](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/blob/main/media/1.jpg))
+- [Image 2: OK1 Printing Files](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/blob/main/media/2.jpg))
+- [Image 3: OK1 Printing Files](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/blob/main/media/3.jpg))
+- [Image 4: OK1 Printing Files](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/blob/main/media/4.jpg))
+
+### Wiring Instructions
+
+- Connect the components according to the Fritzing schema.
+- Ensure proper power distribution and regulation.
+- Check and cross-verify the connections with the detailed schematics.
+
+
+## Arduino Code Compiling and Uploading
+
+Before compiling and uploading the Arduino code for the OK1 Quadruped Robot, ensure that you have downloaded the required libraries. Follow these steps to set up and upload the code:
+
+1. **Download Required Libraries:**
+
+   Open the Arduino IDE and navigate to `Sketch > Include Library > Manage Libraries...`. In the Library Manager, search for and install the following libraries:
+
+   - `Servo.h`
+   - `MPU6050.h`
+   - `Wire.h`
+   - `PID_v1.h` (For self-balance which is not implemented in this version)
+   - `SPI.h`
+   - `nRF24L01.h`
+   - `RF24.h`
+   - `myServo_class.h` (Custom Library)
+   - `Quadruped.h` (Custom Library)
+
+
+   Make sure to install the specific versions of the libraries if mentioned in your project documentation.
+
+1. **Open the Arduino Sketch:**
+
+   Open the main Arduino sketch file located in the `/Arduino` directory of your project.
+
+2. **Configure Arduino Board:**
+
+   Go to `Tools > Board` and select the appropriate Arduino board. Ensure that the correct port is selected under `Tools > Port`.
+
+3. **Verify and Upload:**
+
+   - Click on the checkmark icon (`Verify`) to compile the code and check for any errors.
+   - If the code compiles successfully, click on the right arrow icon (`Upload`) to upload the code to the Arduino board.
+
+4. **Monitor Serial Output (Optional):**
+
+   Open the Serial Monitor (`Tools > Serial Monitor`) to view debug information and status messages if your code includes serial communication.
+
+5. **Troubleshooting:**
+
+   If you encounter any issues during compilation or uploading, refer to the troubleshooting section in the project documentation or community forums.
+
+Remember to customize the instructions based on the specific details of your project, including the names of libraries and any additional configurations users might need to make. If you have a specific troubleshooting section or documentation, it's a good idea to guide users there for more in-depth assistance.
 
 
