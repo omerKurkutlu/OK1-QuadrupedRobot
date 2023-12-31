@@ -251,8 +251,8 @@ Before compiling and uploading the Arduino code for the OK1 Quadruped Robot, ens
    - `SPI.h`
    - `nRF24L01.h`
    - `RF24.h`
-   - `myServo_class.h` (Custom Library)
-   - `Quadruped.h` (Custom Library)
+   - `myServo_class.h` (Custom Library - No download required)
+   - `Quadruped.h` (Custom Library - No download required)
 
 
    Make sure to install the specific versions of the libraries if mentioned in your project documentation.
