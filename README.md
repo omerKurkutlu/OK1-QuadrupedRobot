@@ -41,7 +41,7 @@ This project implements a quadruped robot named OK1 using Arduino, with support 
 - **`/CAD-Hardware`**: Contains 3D printing files for the robot parts.
 - **`/Arduino`**: Arduino code for controlling the robot.
 - **`/ROS_ws`**: ROS packages for communication and control.
-- **`/media`**: Files for Gazebo simulation.
+- **`/media`**: Some useful images for implementation.
 
 ![render0](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/assets/53236244/e8f19957-b274-43f2-a274-e71f6e638073)
 
