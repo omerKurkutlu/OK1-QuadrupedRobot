@@ -4,24 +4,24 @@
 2. [Features](#features)
 3. [Folder Structure](#folder-structure)
 4. [Enjoying OK1 Robot (Video)](#enjoying-ok1-robot-video)
-5. [Remote Controller Usage Instructions](#remote-controller-usage-instructions)
-6. [Getting Started for ROS and Gazebo](#getting-started-for-ros-and-gazebo)
+5. [Getting Started for ROS and Gazebo](#getting-started-for-ros-and-gazebo)
     - [Clone the Repository](#1-clone-the-repository)
     - [Navigate to the ROS Workspace](#2-navigate-to-the-ros-workspace)
     - [Build the ROS Workspace](#3-build-the-ros-workspace)
     - [Source the Workspace](#4-source-the-workspace)
     - [Launch the Robot](#5-launch-the-robot)
-7. [OK1 Robot Simulation (Video)](#ok1-robot-simulation-video)
-8. [3D Printing Files and Assembly Instructions](#3d-printing-files-and-assembly-instructions)
+6. [OK1 Robot Simulation (Video)](#ok1-robot-simulation-video)
+7. [3D Printing Files and Assembly Instructions](#3d-printing-files-and-assembly-instructions)
     - [OK1 Printings](#ok1-printings)
     - [Remote Controller Printings](#remote-controller-printings)
     - [ELECTRONICS for OK1](#electronics-for-ok1)
     - [ELECTRONICS for Remote Controller](#electronics-for-remote-controller)
     - [HARDWAREs](#hardwares)
     - [EXTERNALS](#externals)
-9. [Electronics Assembly](#electronics-assembly)
-10. [Wiring Instructions](#wiring-instructions)
-11. [Arduino Code Compiling and Uploading](#arduino-code-compiling-and-uploading)
+8. [Electronics Assembly](#electronics-assembly)
+9. [Wiring Instructions](#wiring-instructions)
+10. [Arduino Code Compiling and Uploading](#arduino-code-compiling-and-uploading)
+11. [Remote Controller Usage Instructions](#remote-controller-usage-instructions)
 
 
 ## Overview
@@ -51,10 +51,6 @@ This project implements a quadruped robot named OK1 using Arduino, with support 
 ## Enjoying OK1 Robot (Video)
 
 [![We are enjoying OK1 Robot.](https://img.youtube.com/vi/7ynvawNMwWk/0.jpg)](https://www.youtube.com/watch?v=7ynvawNMwWk&ab_channel=%C3%96merKurkutlu)
-
-
-## Remote controller usage instructions 
-![remote](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/assets/53236244/2ecdcddc-efc1-45f6-b638-c44f203aaf1d)
 
 
 ## Getting Started for ROS and Gazebo
@@ -281,3 +277,5 @@ Before compiling and uploading the Arduino code for the OK1 Quadruped Robot, ens
 Remember to customize the instructions based on the specific details of your project, including the names of libraries and any additional configurations users might need to make. If you have a specific troubleshooting section or documentation, it's a good idea to guide users there for more in-depth assistance.
 
 
+## Remote controller usage instructions 
+![remote](https://github.com/omerKurkutlu/OK1-QuadrupedRobot/assets/53236244/2ecdcddc-efc1-45f6-b638-c44f203aaf1d)
