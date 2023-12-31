@@ -116,8 +116,7 @@ Additionally, assembly instructions are available in a series of video tutorials
 [Assembly Video Series](https://www.youtube.com/watch?v=DqhxIvC9eWk&list=PLxYZuRPj6mQb903nfbroYomobq1NtwxHy&pp=gAQBiAQB)
 
 
-
-
+[You can enjoy Solidworks Assembly Video Series](https://www.youtube.com/watch?v=uvvxWS9CNvI&list=PLxYZuRPj6mQaa-p4TQK3fZpWwg_Pw1YFy&pp=gAQBiAQB)
 
 
 ### OK1 Printings
